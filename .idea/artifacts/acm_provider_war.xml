@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="acm-provider:war">
+    <output-path>$PROJECT_DIR$/acmsoa/acm-provider/target</output-path>
+    <root id="archive" name="user-soa-provider.war">
+      <element id="artifact" artifact-name="acm-provider:war exploded" />
+    </root>
+  </artifact>
+</component>
