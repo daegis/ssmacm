@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 /**
  * Using IntelliJ IDEA.
  *
@@ -26,9 +28,10 @@ public class TestController {
     private ICommonService service;
 
     @RequestMapping("/01/{id}")
-    public String test01(@PathVariable String id, Model model) {
-        City city = service.get(City.class, "id", id);
-        model.addAttribute("name", city.getName());
+    public String test01(@PathVariable Integer id, Model model) {
+        log.info("访问到了这个方法");
+        List<City> id1 = service.getList(City.class, "id", id);
+        model.addAttribute("name", id1.get(0).getName());
         return "test";
     }
 }
