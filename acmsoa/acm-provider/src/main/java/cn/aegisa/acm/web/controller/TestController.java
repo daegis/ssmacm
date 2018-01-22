@@ -24,7 +24,6 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    @Qualifier("ucenterCommonService")
     private ICommonService service;
 
     @RequestMapping("/01/{id}")
